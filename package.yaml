@@ -35,6 +35,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ctfp
+    - random
 
 tests:
   ctfp-test:
