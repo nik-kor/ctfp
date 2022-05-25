@@ -1,25 +1,28 @@
+{-# OPTIONS_GHC -Wno-missing-methods #-}
+
 module Main where
 
+import Ch4
+import Data.Bits (Bits (xor))
 import Data.List (unfoldr)
-import Lib (someFunc)
-import System.Random (RandomGen, mkStdGen, uniformR)
 import Data.Void
+import System.Random (RandomGen, mkStdGen, uniformR)
 
--- TODO - check if the same seed gives same "random" numbers - Challenge 2.3
--- TODO what is => `a :: Num p => p`
 rand :: [Word]
 rand =
   let rolls :: RandomGen g => Int -> g -> [Word]
       rolls n = take n . unfoldr (Just . uniformR (1, 6))
-      pureGen = mkStdGen 137
+      pureGen = mkStdGen 1
    in rolls 10 pureGen :: [Word]
 
 absurd :: Void -> a
-absurd = undefined 
+absurd = undefined
 
 main :: IO ()
 main = do
-  putStrLn "hi there"
-  putStrLn "brra"
-  putStrLn "bbbbba"
+  putStrLn "-------Chapter 2"
   print rand
+
+  putStrLn "-------Chapter 4"
+  (print . (safeRoot >=> safeReciprocal)) (-1)
+  (print . (safeRoot >=> safeReciprocal)) 9
