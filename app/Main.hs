@@ -3,6 +3,7 @@
 module Main where
 
 import Ch4
+import Ch6
 import Data.Bits (Bits (xor))
 import Data.List (unfoldr)
 import Data.Void

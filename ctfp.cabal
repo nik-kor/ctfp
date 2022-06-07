@@ -25,6 +25,7 @@ source-repository head
 library
   exposed-modules:
       Ch4
+      Ch6
   other-modules:
       Paths_ctfp
   hs-source-dirs:
