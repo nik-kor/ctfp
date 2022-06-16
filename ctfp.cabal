@@ -26,6 +26,7 @@ library
   exposed-modules:
       Ch4
       Ch6
+      Ch7
   other-modules:
       Paths_ctfp
   hs-source-dirs:

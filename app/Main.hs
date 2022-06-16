@@ -4,7 +4,7 @@ module Main where
 
 import Ch4
 import Ch6
-import Data.Bits (Bits (xor))
+import Ch7
 import Data.List (unfoldr)
 import Data.Void
 import System.Random (RandomGen, mkStdGen, uniformR)
